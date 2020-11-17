@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+		integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+		crossorigin=""/>
+		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+		integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+		crossorigin=""></script>
+		<style>
+		#mapdiv { position:relative; width:80%; }
+		</style>
+
+		<!-- No need to change the script above this comment -->
+
+
+		<!-- The Body of the Webpage starts HERE! -->
+		<!-- Try 1. Change a Background color -->
+		<body bgcolor='#FFFFF0'>
+
+			<!-- Try 2. Change the Alert Message -->
+			<script language="JavaScript">
+			window.alert("Welcom to Paris! Are you ready for a tour?");
+			</script>
+
+
+			<!-- This is an introductory section where we give a general description of the topic -->
+			<div style="font-family:Comic Sans MS; text-align:center;margin: auto; padding:10px; width: 90%">
+				<!-- Try 3. Give your webpage a TITLE -->
+				<h1><font style="color:#21618C; font-family:Arial Black" > Head1: Welcome to Paris! </font></h1>
+
+
+				<!-- This is an image  -->
+				<!-- Try 4. Put your selected image or photos to the webpage -->
+				<center><img src='img1_BirdView_Paris.jpg' height=500></center>
+
+				<!-- These are some texts -->
+				<!-- Try 5. Try to replace some texts with your own words -->
+				<p style="font-family:Comic Sans MS; text-align:center; font-size:30px" > “America is my country and Paris is my hometown.”</p>
+
+				<!-- Try 6. Delete the paragraphs if needed -->
+				<p style="font-family:Comic Sans MS; text-align:center; font-size:20px" > --------- Gertrude Stein</p>
+				<p style="font-family:Comic Sans MS; text-align:center" > Read more memorable <a href="https://www.veranda.com/travel/g30296562/quotes-on-paris"> quotes</a> about Paris</p>
+				<p> Paris, capital of France, is one of the most important and influential cities in the world. In terms of tourism, Paris is the second most visited city in Europe after London. In this travel guide, you’ll find out about the city’s top attractions, as well as useful travel advice on how to get to Paris and how to save money whilst traveling.</p>
+			</div>
+			<!-- END introductory section -->
+			
+
+
+			<!-- Here starts a NEW section of the topic -->
+			<div style="font-family:Comic Sans MS; text-align:center;margin: auto; padding:40px; width: 90%">
+
+				<!-- Try 7: Change Head2 and paragraph based on your selected topic. Delete it if needed -->
+				<h2><font style="color:#AF7AC5; font-family:Arial Black"> Head2: Reasons to Visit Paris </font></h2>
+				<p>The capital of France seems to have been designed specifically for the enjoyment of its visitors. Its streets, squares, buildings, gardens and monuments beckon tourists to return, and indeed, many do. Some of the most memorable things to do in Paris include visiting the Eiffel Tower, the Arc de Triomphe and Notre-Dame Cathedral. During the evening, experiencing one of the legendary Moulin Rouge cabaret shows, strolling through some of the most picturesque neighborhoods, like Montmartre, or climbing the Montparnasse Tower are a must.</p>
+				
+				<h3><font style="color:#EC7063; font-family:Arial Black"> Head3: Landmarks</font></h3>
+
+				<!-- Here we add more pictures and descriptions! -->
+				<!-- Try 8: Change the pictures and texts based on your topic -->
+				<img src="img2_MuseeLouvre.jpg" style="width:50%">
+				<p> <b>Text in bold: Louvre Museum:</b> Opened at the end of the eighteenth century, the Louvre is the country’s most renowned museum and one of the most visited in the world. Presently, it receives over 8 million visitors each year.</p>
+				<p></p>
+
+				<img src="img3_ArcDeTriomph.jpg" style="width:50%">
+				<p> <b>ext in bold: Tour Eiffel:</b> Built in 1889 for the Exposition Universelle, the Eiffel Tower (Tour Eiffel) has become the main symbol of Paris. It is also the most-visted attraction in the world.</p>
+				<p></p>
+
+				<img src="img4_TourEffel.jpg" style="width:50%">
+				<p> <b>ext in bold: Arc de Triomphe:</b> The is an emblematic symbol of the capital of France and it represents the various victories of the French army under Napoleon, who commissioned its construction. </p>
+				<p></p>
+				<p></p>
+
+
+				<!-- Here we embed a map. First we give the map a name as Head 3 -->
+				<!-- Try 9: Change Head3 based on your topic -->
+				<h3><font style="color:#EC7063; font-family:Arial Black"> Head3: Mapping the Top Attractions in Paris</font></h3>
+				<div id="mapdiv" style="margin: auto; ; padding:40px; height: 600px; width: 80%;position: center" >
+				</div>
+			</div>
+			
+			<!-- Here we embed a YouTube Video. The video link is NOT the web link -->
+			<!-- Try 10: Replace the video with your selected one -->
+			<div style="text-align:center; margin: auto; padding:40px; width: 90%">
+				<p> </p>
+				<h2><font style="color:#AF7AC5; font-family:Arial Black"> Head2: Virtual Tour </font></h2>
+				<!-- New feature: VideoEmbedded -->
+				<iframe src="https://www.youtube.com/embed/UfEiKK-iX70?autoplay=1&mute=1" height="400" width="600" title="Iframe Example"></iframe>
+				<p> </p>
+				<p> </p>
+			</div>
+			
+
+			<!-- Here are the parameters of the maps.-->
+			<!-- Try 11: Change the coordinates of the Map -->
+			<!-- Try 12: Change the Zoom scale which taken value between (0,20) -->
+			<!-- Try 13: Add more markers -->
+			<!-- Try 14: Change the background of the OpenStreetMap -->
+			<script>
+			var mymap = L.map('mapdiv').setView([48.8566, 2.3522], 12.2);
+			L.tileLayer('http://tile.stamen.com/terrain/{z}/{x}/{y}.png', {
+				maxZoom: 20,
+				attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>'
+				}).addTo(mymap);
+			L.marker([48.8566, 2.3522]).addTo(mymap).bindPopup("<b>Hi, there is Paris!</b><br/>Welcome").openPopup();
+			// L.marker([48.857988, 2.294840]).addTo(mymap).bindPopup("Tour Eiffel").closePopup();
+			// L.marker([48.863359, 2.325586]).addTo(mymap).bindPopup("Museum Louvre").closePopup();
+			// L.marker([48.853252, 2.368900]).addTo(mymap).bindPopup("Place de la Bastille").closePopup();
+			// L.marker([48.873693, 2.295038]).addTo(mymap).bindPopup("L Arc de Triomphe").closePopup();
+			</script>
+		</body>
+	</html>
